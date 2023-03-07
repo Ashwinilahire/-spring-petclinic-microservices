@@ -2,7 +2,6 @@ pipeline {
   agent any
 
   tools {
-    jdk "JAVA_HOME"
     maven 'Jenkin-Maven'
   }
   stages {
@@ -17,7 +16,7 @@ pipeline {
     stage ('Build images') {
       steps {
         echo 'Building imgaes......'
-         sh 'mvn clean install spring-boot:repackage'
+         sh 'mvn compile'
          sh './mvnw clean install -P buildDocker'
       }
     }
