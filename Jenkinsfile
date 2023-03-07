@@ -15,7 +15,7 @@ pipeline {
 
     stage ('Build images') {
       steps {
-        echo 'Building imgaes......'
+        echo 'Building imgaes.......'
          sh './mvnw clean install -P buildDocker'
       }
     }
