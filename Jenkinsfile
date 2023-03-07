@@ -2,7 +2,8 @@ pipeline {
   agent any
 
   tools {
-    maven 'Jenkin-Maven'
+    jdk "jdk20
+    maven 'Maven 4.0'
   }
   stages {
 
@@ -16,8 +17,7 @@ pipeline {
     stage ('Build images') {
       steps {
         echo 'Building imgaes......'
-         sh 'mvn clean install -U'
-         sh 'mvn dependency:resolve-plugins'
+         sh 'mvn clean install'
          sh './mvnw clean install -P buildDocker'
       }
     }
