@@ -17,7 +17,7 @@ pipeline {
     stage ('Build images') {
       steps {
         echo 'Building imgaes......'
-         sh 'mvn clean install'
+         sh 'mvn dependency:purge-local-repository'
          sh './mvnw clean install -P buildDocker'
       }
     }
