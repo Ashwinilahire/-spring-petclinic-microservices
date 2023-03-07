@@ -16,6 +16,7 @@ pipeline {
     stage ('Build images') {
       steps {
         echo 'Building imgaes......'
+         sh 'mvn clean install -U'
          sh 'mvn dependency:resolve-plugins'
          sh './mvnw clean install -P buildDocker'
       }
