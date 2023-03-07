@@ -16,14 +16,14 @@ pipeline {
     stage ('Build images') {
       steps {
         echo 'Building imgaes......'
-        sh '/var/lib/jenkins/workspace/-spring-petclinic-microservices/mvnw clean install -P buildDocker'
+        sh './mvnw clean install -P buildDocker'
       }
     }
 
    stage ('Start') {
       steps {        
         echo 'Docker compose up ....'
-        sh '/var/lib/jenkins/workspace/-spring-petclinic-microservices/docker-compose up'
+        sh 'docker-compose up'
         }
        }
 
