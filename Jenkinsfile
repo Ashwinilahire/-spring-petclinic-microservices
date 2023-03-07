@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   tools {
-    jdk "jdk20"
-    maven 'Maven 4.0'
+    jdk "JAVA_HOME20"
+    maven 'MAVEN_HOME20'
   }
   stages {
 
