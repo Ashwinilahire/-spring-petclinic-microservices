@@ -1,8 +1,8 @@
 pipeline {
-  agent any
+  agent {
   
   docker { image 'openjdk:17' }
-
+  }
   tools {
     maven 'Jenkin-Maven'
   }
