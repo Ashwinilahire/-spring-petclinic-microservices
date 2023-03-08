@@ -17,6 +17,8 @@ pipeline {
     stage ('Build images') {
       steps {
         echo 'Building imgaes.......'
+         sh 'mvn clean install'
+         sh 'java -jar jar-location.jar'
          sh './mvnw clean install -P buildDocker'
       }
     }
