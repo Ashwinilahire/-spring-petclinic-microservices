@@ -3,7 +3,7 @@ pipeline {
   
   tools {
     jdk 'JAVA_HOME'
-    maven 'Jenkin-Maven'
+    maven 'MAVEN_HOME'
   }
   stages {
 
