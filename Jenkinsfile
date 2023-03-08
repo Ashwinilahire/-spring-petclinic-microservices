@@ -1,8 +1,9 @@
 pipeline {
   agent any
+  
+  docker { image 'openjdk:17' }
 
   tools {
-    jdk 'JAVA_HOME'
     maven 'Jenkin-Maven'
   }
   stages {
