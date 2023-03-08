@@ -17,6 +17,7 @@ pipeline {
     stage ('Build images') {
       steps {
         echo 'Building imgaes.......'
+         sh 'mvn clean package'
          sh './mvnw clean install -P buildDocker'
       }
     }
@@ -24,7 +25,7 @@ pipeline {
    stage ('Start') {
       steps {        
         echo 'Docker compose up ....'
-        sh 'docker-compose up'
+        sh 'docker-compose.yml up'
         }
        }
 
