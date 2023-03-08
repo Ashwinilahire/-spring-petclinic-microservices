@@ -1,9 +1,8 @@
 pipeline {
-  agent {
+  agent any
   
-  docker { image 'openjdk:17' }
-  }
   tools {
+    jdk 'JDK17'
     maven 'Jenkin-Maven'
   }
   stages {
@@ -18,6 +17,7 @@ pipeline {
     stage ('Build images') {
       steps {
         echo 'Building imgaes.......'
+          sh 'mvn install exec:java'
          sh 'mvn clean install'
          sh 'java -jar jar-location.jar'
          sh './mvnw clean install -P buildDocker'
