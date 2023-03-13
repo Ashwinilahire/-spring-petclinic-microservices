@@ -25,7 +25,7 @@ pipeline {
    stage ('Start') {
      steps{  
         echo 'Docker compose up ....'
-        sh 'docker-compose --file /var/lib/jenkins/workspace/'Spring Petclinic'/docker-compose.yml up -d'
+        sh 'COMPOSE_HTTP_TIMEOUT=600 docker-compose up'
         }
        }
 
