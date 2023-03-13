@@ -25,8 +25,7 @@ pipeline {
    stage ('Start') {
       steps {        
         echo 'Docker compose up ....'
-        sh 'cd /var/lib/jenkins/workspace/'Spring Petclinic'/'
-        sh 'docker-compose up'
+        sh 'docker-compose --file /var/lib/jenkins/workspace/'Spring Petclinic'/docker-compose.yml up -d'
         }
        }
 
