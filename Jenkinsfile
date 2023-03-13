@@ -25,7 +25,7 @@ pipeline {
    stage ('Start') {
       steps {        
         echo 'Docker compose up ....'
-        sh 'docker-compose.yml up'
+        sh 'docker-compose up'
         }
        }
 
