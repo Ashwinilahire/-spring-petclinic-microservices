@@ -22,8 +22,9 @@ pipeline {
     }
 
   stage ('start service') {
-      steps {        
-        sh 'cd /home/$USER'
+      steps {    
+        echo "$(pwd)"
+        sh 'cd  ~/home/$USER'
         sh 'docker-compose up'
         sh 'sleep 100'
         }
