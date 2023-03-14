@@ -24,8 +24,6 @@ pipeline {
   stage ('start service') {
       steps {    
         sh 'pwd'
-        sh 'docker-compose.yml up -d'
-        sh 'sleep 100'
         }
        }
     
