@@ -24,6 +24,8 @@ pipeline {
   stage ('start service') {
       steps {    
         sh 'pwd'
+        sh 'docker-compose --file /var/lib/jenkins/workspace/spring-petclinic-microservices/docker-compose.yml up -d'
+        sh 'sleep 100'
         }
        }
     
