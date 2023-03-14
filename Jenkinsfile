@@ -22,12 +22,13 @@ pipeline {
       }
     }
 
-   stage ('Start') {
-     steps{  
-        echo 'Docker compose up ....'
-        sh 'docker-compose up'
+  stage ('start service') {
+      steps {        
+        sh 'docker-compose --file /var/lib/jenkins/workspace/spring-petclinic-microservices/docker-compose.yml up -d'
+        sh 'sleep 100'
         }
        }
+    
 
       }
 }
