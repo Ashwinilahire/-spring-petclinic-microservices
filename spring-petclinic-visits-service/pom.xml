@@ -93,9 +93,9 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <scope>test</scope>
         </dependency>
-	</dependencies>
+   </dependencies>
 
-   <profiles>
+    <profiles>
         <profile>
             <id>buildDocker</id>
             <build>
@@ -109,4 +109,5 @@
             </build>
         </profile>
     </profiles>
+
 </project>
