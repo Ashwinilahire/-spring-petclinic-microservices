@@ -69,7 +69,7 @@ services:
     environment:
     - JAVA_OPTS=-XX:+UnlockExperimentalVMOptions -Djava.security.egd=file:/dev/./urandom
     ports:
-     - 9411:9411
+     - 9411:9412
 
   admin-server:
     image: springcommunity/spring-petclinic-admin-server
