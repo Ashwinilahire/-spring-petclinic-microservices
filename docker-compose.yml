@@ -27,7 +27,7 @@ services:
      - discovery-server
     entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
     ports:
-    - 8081:8081
+    - 8081:8084
 
   visits-service:
     image: springcommunity/spring-petclinic-visits-service
