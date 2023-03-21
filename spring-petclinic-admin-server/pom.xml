@@ -58,7 +58,7 @@
 
     </dependencies>
 
-    <profiles>
+   <profiles>
         <profile>
             <id>buildDocker</id>
             <build>
