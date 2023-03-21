@@ -6,7 +6,7 @@ services:
     container_name: config-server
     mem_limit: 512M
     ports:
-     - 8888:8889
+     - 8886:8889
 
   discovery-server:
     image: springcommunity/spring-petclinic-discovery-server
