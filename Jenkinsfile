@@ -25,7 +25,8 @@ pipeline {
       steps {    
         sh 'pwd'
         sh 'cd /var/lib/jenkins/workspace/spring-petclinic-microservices/'
-        sh 'docker compose up --wait'
+        sh 'docker compose up -d'
+        sh 'sleep 700'
         }
        }
     
